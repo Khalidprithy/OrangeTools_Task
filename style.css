@@ -475,3 +475,11 @@ body{
     color: white;
     margin-top: 30px;
   }
+
+  .sideBar.active{
+    left: 0;
+  }
+
+  .rotate{
+    transform: rotate(90deg);
+  }

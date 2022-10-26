@@ -74,7 +74,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="menu" href="">
+                    <a class="menu" class="sub-btn" href="">
                         <svg class="dashboardIcon" width="16" height="16" viewBox="0 0 16 16" fill="#7D7D7E"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -96,7 +96,7 @@
                             stroke="currentColor" class="arrowIcon">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
-                        <div class="log-dropdown-menu">
+                        <div id="" class="log-dropdown-menu">
                             <a class="log-sub-item" href="">
                                 <svg class="dashboardIcon" width="14" height="16" viewBox="0 0 14 16" fill="#7D7D7E"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -353,8 +353,15 @@
             </div>
         </div>
     </main>
-
-    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.sub-btn').click(function () {
+            $(this).next('.log-dropdown-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+        });
+    </script>
 
 </body>
 
